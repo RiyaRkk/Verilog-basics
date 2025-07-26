@@ -1,0 +1,10 @@
+module decoder2_4(
+input a,b,en,
+  output [3:0]D);
+
+  assign D[0]=~(~a & ~b & en);
+  assign D[1]=~(~a & b & en);
+  assign D[2]=~(a & ~b & en);
+  assign D[3]=~(a & b & en);
+
+endmodule
